@@ -1,18 +1,20 @@
 {
   "name": "vf-goto-proxy",
   "version": "1.0.0",
+  "type": "module",               // ← NEW: tells Node “treat .js as ES modules”
+  "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon index.js",    // ← NEW: convenient “hot-reload” script
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2"        // node-fetch v3 is ESM-only, so “type”:“module” is required
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
